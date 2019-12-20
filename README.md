@@ -218,7 +218,7 @@ A prebuilt iOS, macOS, tvOS and watchOS universal
 [`libzmq`](https://github.com/zeromq/libzmq) library is bundled with this
 library under the [LGPL](https://github.com/zeromq/libzmq#license) license.
 
-[travis-badge]: https://travis-ci.com/Pooppap/SwiftyZeroMQ.svg?branch=master
+[travis-badge]: https://travis-ci.com/Pooppap/SwiftyZeroMQ.svg?branch=Swift4.2
 [travis-url]: https://travis-ci.com/Pooppap/SwiftyZeroMQ
 
 [swift-badge]: https://img.shields.io/badge/Swift-4.2-orange.svg?style=flat
