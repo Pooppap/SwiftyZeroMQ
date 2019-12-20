@@ -1,6 +1,6 @@
 
 language: objective-c
-osx_image: xcode10.1
+osx_image: xcode11.2
 
 env:
   global:
@@ -9,34 +9,34 @@ env:
     - PROJECT=SwiftyZeroMQ.xcodeproj
 
     # iOS
-    - IOS_SDK=iphonesimulator12.1
+    - IOS_SDK=iphonesimulator13.2
     - IOS_FRAMEWORK_SCHEME="SwiftyZeroMQ-iOS"
 
     # macOS
-    - MACOS_SDK=macosx10.14
+    - MACOS_SDK=macosx10.15
     - MACOS_FRAMEWORK_SCHEME="SwiftyZeroMQ-macOS"
 
     # tvOS
-    - TVOS_SDK=appletvsimulator12.1
+    - TVOS_SDK=appletvsimulator13.2
     - TVOS_FRAMEWORK_SCHEME="SwiftyZeroMQ-tvOS"
 
     # watchOS
-    - WATCHOS_SDK=watchsimulator5.1
+    - WATCHOS_SDK=watchsimulator6.1
     - WATCHOS_FRAMEWORK_SCHEME="SwiftyZeroMQ-watchOS"
 
   matrix:
-    # iOS 10.0
-    - DESTINATION="OS=10.0,name=iPhone 6"
-      SIMULATOR_NAME="iPhone 6 (10.0)"
+    # iOS 13.2
+    - DESTINATION="OS=13.2,name=iPhone 6"
+      SIMULATOR_NAME="iPhone 6 (13.2)"
       SCHEME="$IOS_FRAMEWORK_SCHEME"
       SDK="$IOS_SDK"
       RUN_TESTS="YES"
       POD_LINT="YES"
       EXAMPLE_PROJECT="Example-iOS"
 
-    # iOS 9.0
-    - DESTINATION="OS=9.0,name=iPhone 5"
-      SIMULATOR_NAME="iPhone 5 (9.0)"
+    # iOS 10.3
+    - DESTINATION="OS=10.3,name=iPhone 5"
+      SIMULATOR_NAME="iPhone 5 (10.3)"
       SCHEME="$IOS_FRAMEWORK_SCHEME"
       SDK="$IOS_SDK"
       RUN_TESTS="YES"
@@ -52,26 +52,26 @@ env:
       POD_LINT="NO"
       EXAMPLE_PROJECT="Example-macOS"
 
-    # tvOS 10.0
-    - DESTINATION="OS=10.0,name=Apple TV 1080p"
-      SIMULATOR_NAME="Apple TV 1080p (10.1)"
+    # tvOS 13.2
+    - DESTINATION="OS=13.2,name=Apple TV 1080p"
+      SIMULATOR_NAME="Apple TV 1080p (13.2)"
       SCHEME="$TVOS_FRAMEWORK_SCHEME"
       SDK="$TVOS_SDK"
       RUN_TESTS="YES"
       POD_LINT="NO"
       EXAMPLE_PROJECT="Example-tvOS"
 
-    # tvOS 9.0
-    - DESTINATION="OS=9.0,name=Apple TV 1080p"
-      SIMULATOR_NAME="Apple TV 1080p (9.0)"
+    # tvOS 10.2
+    - DESTINATION="OS=10.2,name=Apple TV 1080p"
+      SIMULATOR_NAME="Apple TV 1080p (10.2)"
       SCHEME="$TVOS_FRAMEWORK_SCHEME"
       SDK="$TVOS_SDK"
       RUN_TESTS="YES"
       POD_LINT="NO"
       EXAMPLE_PROJECT="Example-tvOS"
 
-    # watchOS 3.1 (no tests, just build)
-    - DESTINATION="OS=3.1,name=Apple Watch - 42mm"
+    # watchOS 6.1 (no tests, just build)
+    - DESTINATION="OS=6.1,name=Apple Watch - 42mm"
       SIMULATOR_NAME=""
       SCHEME="$WATCHOS_FRAMEWORK_SCHEME"
       SDK="$WATCHOS_SDK"
@@ -79,8 +79,8 @@ env:
       POD_LINT="NO"
       EXAMPLE_PROJECT="Example-watchOS"
 
-    # watchOS 2.0 (no tests, just build)
-    - DESTINATION="OS=2.0,name=Apple Watch - 42mm"
+    # watchOS 3.2 (no tests, just build)
+    - DESTINATION="OS=3.2,name=Apple Watch - 42mm"
       SIMULATOR_NAME=""
       SCHEME="$WATCHOS_FRAMEWORK_SCHEME"
       SDK="$WATCHOS_SDK"
