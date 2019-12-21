@@ -26,8 +26,8 @@ env:
 
   matrix:
     # iOS 13.2
-    - DESTINATION="OS=13.2,name=iPhone 6"
-      SIMULATOR_NAME="iPhone 6 (13.2)"
+    - DESTINATION="OS=13.2.2,name=iPhone 11"
+      SIMULATOR_NAME="iPhone 11 (13.2.2)"
       SCHEME="$IOS_FRAMEWORK_SCHEME"
       SDK="$IOS_SDK"
       RUN_TESTS="YES"
@@ -35,8 +35,8 @@ env:
       EXAMPLE_PROJECT="Example-iOS"
 
     # iOS 10.3
-    - DESTINATION="OS=10.3,name=iPhone 5"
-      SIMULATOR_NAME="iPhone 5 (10.3)"
+    - DESTINATION="OS=10.3.1,name=iPhone 5"
+      SIMULATOR_NAME="iPhone 5 (10.3.1)"
       SCHEME="$IOS_FRAMEWORK_SCHEME"
       SDK="$IOS_SDK"
       RUN_TESTS="YES"
@@ -53,8 +53,8 @@ env:
       EXAMPLE_PROJECT="Example-macOS"
 
     # tvOS 13.2
-    - DESTINATION="OS=13.2,name=Apple TV 1080p"
-      SIMULATOR_NAME="Apple TV 1080p (13.2)"
+    - DESTINATION="OS=13.2,name=Apple TV"
+      SIMULATOR_NAME="Apple TV (13.2)"
       SCHEME="$TVOS_FRAMEWORK_SCHEME"
       SDK="$TVOS_SDK"
       RUN_TESTS="YES"
@@ -71,7 +71,7 @@ env:
       EXAMPLE_PROJECT="Example-tvOS"
 
     # watchOS 6.1 (no tests, just build)
-    - DESTINATION="OS=6.1,name=Apple Watch - 42mm"
+    - DESTINATION="OS=6.1,name=Apple Watch Series 5 - 44mm"
       SIMULATOR_NAME=""
       SCHEME="$WATCHOS_FRAMEWORK_SCHEME"
       SDK="$WATCHOS_SDK"
@@ -130,7 +130,7 @@ script:
 
   # Build Example project in Debug
   - if [ $EXAMPLE_PROJECT == "Example-watchOS" ]; then
-      (cd "Examples/$EXAMPLE_PROJECT" && (xcodebuild -project "Example-watchOS.xcodeproj" -scheme "Example-watchOS WatchKit App"  -destination "platform=iOS Simulator,OS=12.1,id=2B5E6E99-EA54-4E36-A447-0FB03A1A7751" -configuration Debug ONLY_ACTIVE_ARCH=NO build | xcpretty));
+      (cd "Examples/$EXAMPLE_PROJECT" && (xcodebuild -project "Example-watchOS.xcodeproj" -scheme "Example-watchOS WatchKit App"  -destination "platform=iOS Simulator,OS=13.2.2,id=15FF86B7-8C5B-414A-82EF-E49F7F2992A1" -configuration Debug ONLY_ACTIVE_ARCH=NO build | xcpretty));
     else
       (cd "Examples/$EXAMPLE_PROJECT" && (xcodebuild -project "${EXAMPLE_PROJECT}.xcodeproj" -scheme "$EXAMPLE_PROJECT" -sdk "$SDK" -destination "$DESTINATION" -configuration Debug ONLY_ACTIVE_ARCH=NO build | xcpretty));
     fi
