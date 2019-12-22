@@ -39,3 +39,7 @@ Carthage/Build
 
 .DS_Store
 SwiftyZeroMQ.xcodeproj/project.xcworkspace/xcshareddata/IDEWorkspaceChecks.plist
+Examples/Example-iOS/Example-iOS.xcodeproj/project.xcworkspace/xcshareddata/IDEWorkspaceChecks.plist
+Examples/Example-macOS/Example-macOS.xcodeproj/project.xcworkspace/xcshareddata/IDEWorkspaceChecks.plist
+Examples/Example-tvOS/Example-tvOS.xcodeproj/project.xcworkspace/xcshareddata/IDEWorkspaceChecks.plist
+Examples/Example-watchOS/Example-watchOS.xcodeproj/project.xcworkspace/xcshareddata/IDEWorkspaceChecks.plist
